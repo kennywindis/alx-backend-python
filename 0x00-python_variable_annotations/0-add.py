@@ -2,5 +2,5 @@
 """ Basic annotations - add """
 
 def add(a,b):
-    add = (float(a) + (b)):
+    add = (float(a) + float(b)):
     return add
