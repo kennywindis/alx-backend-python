@@ -2,5 +2,6 @@
 """ Basic annotations - add """
 
 def add(a: float,b: float) -> float:
+    """sum of floats"""
     add = a + b
     return add
