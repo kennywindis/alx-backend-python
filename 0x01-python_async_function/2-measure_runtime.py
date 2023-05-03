@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-""" Create a function with args that measures total execution time and returns float """
+
+""" Create a function wtih integers as arguments that measure total execution time """
+
 import asyncio
 import time
 wait_n = __import__('1-concurrent_coroutines').wait_n
