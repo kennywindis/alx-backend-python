@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-""" concurrent coroutines """
+""" An async routine that takes 2 int args """
 import asyncio
 from typing import List
 wait_random = __import__('0-basic_async_syntax').wait_random
