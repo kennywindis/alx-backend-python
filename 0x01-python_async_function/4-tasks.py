@@ -1,18 +1,23 @@
 #!/usr/bin/env python3
-"""tasks"""
+"""Function that takes an integer max_delay and returns a asyncio.Task"""
+
 
 import asyncio
 from typing import List
 task_wait_random = __import__('3-tasks').task_wait_random
 
-async def task_wait_n(n: int, max_delay: int) -> List[float]:
-    """extract code and alter into new function"""
 
-    delays: List[float] = []
-    all_delays: List[float] = []
-    for k in range(n):
-        delays.append(task_wait_random(max_delay))
-        for delay in asyncio.as_completed(delays):
-        earliest_result = await delay
-        all_delays.append(earliest_result)
-    return all_delays
+async def task_wait_n(n: int, max_delay: int = 10) -> List[float]:
+    """Tasks"""
+    list_sec = []
+    sorted_list = []
+
+    for _ in range(n):
+        res = task_wait_random(max_delay)
+        list_sec.append(res)
+
+    for q in asyncio.as_completed(list_sec):
+        result = await q
+        sorted_list.append(result)
+
+    return sorted_list 
