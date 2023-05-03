@@ -9,3 +9,4 @@ async def async_comprehension() -> List[float]:
     """ async Comprehensions """
     k = [i async for i in async_generator()]
     return k
+
